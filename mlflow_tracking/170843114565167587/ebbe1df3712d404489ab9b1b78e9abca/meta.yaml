@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/ebbe1df3712d404489ab9b1b78e9abca/artifacts
+end_time: 1740819726366
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: ebbe1df3712d404489ab9b1b78e9abca
+run_name: mysterious-crane-243
+run_uuid: ebbe1df3712d404489ab9b1b78e9abca
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819725578
+status: 3
+tags: []
+user_id: henrytomlinson

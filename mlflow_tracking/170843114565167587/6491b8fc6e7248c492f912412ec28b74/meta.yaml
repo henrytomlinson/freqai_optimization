@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/6491b8fc6e7248c492f912412ec28b74/artifacts
+end_time: 1740816240169
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 6491b8fc6e7248c492f912412ec28b74
+run_name: fearless-penguin-637
+run_uuid: 6491b8fc6e7248c492f912412ec28b74
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816240154
+status: 3
+tags: []
+user_id: henrytomlinson

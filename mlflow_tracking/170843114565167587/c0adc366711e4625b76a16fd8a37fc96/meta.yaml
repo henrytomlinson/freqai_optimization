@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/c0adc366711e4625b76a16fd8a37fc96/artifacts
+end_time: 1740819723324
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: c0adc366711e4625b76a16fd8a37fc96
+run_name: lyrical-donkey-297
+run_uuid: c0adc366711e4625b76a16fd8a37fc96
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819722810
+status: 3
+tags: []
+user_id: henrytomlinson

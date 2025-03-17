@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/dcfd5a5b81df487f836714b083509ea2/artifacts
+end_time: 1740819783653
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: dcfd5a5b81df487f836714b083509ea2
+run_name: youthful-shrike-1
+run_uuid: dcfd5a5b81df487f836714b083509ea2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819782947
+status: 3
+tags: []
+user_id: henrytomlinson

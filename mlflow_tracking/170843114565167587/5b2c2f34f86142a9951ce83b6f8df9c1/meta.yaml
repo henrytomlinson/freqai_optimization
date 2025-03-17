@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/5b2c2f34f86142a9951ce83b6f8df9c1/artifacts
+end_time: 1740816239889
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 5b2c2f34f86142a9951ce83b6f8df9c1
+run_name: skillful-asp-219
+run_uuid: 5b2c2f34f86142a9951ce83b6f8df9c1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816239872
+status: 3
+tags: []
+user_id: henrytomlinson

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/bd2d486149c84b10933ebc527ca3e12c/artifacts
+end_time: 1740816239733
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: bd2d486149c84b10933ebc527ca3e12c
+run_name: mysterious-vole-503
+run_uuid: bd2d486149c84b10933ebc527ca3e12c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816239723
+status: 3
+tags: []
+user_id: henrytomlinson

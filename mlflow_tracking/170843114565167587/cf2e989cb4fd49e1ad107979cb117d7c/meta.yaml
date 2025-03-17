@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/cf2e989cb4fd49e1ad107979cb117d7c/artifacts
+end_time: 1740819754238
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: cf2e989cb4fd49e1ad107979cb117d7c
+run_name: bright-koi-419
+run_uuid: cf2e989cb4fd49e1ad107979cb117d7c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819753425
+status: 3
+tags: []
+user_id: henrytomlinson

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/a008e0904d064fa18f51f9afa4215a34/artifacts
+end_time: 1740819779224
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: a008e0904d064fa18f51f9afa4215a34
+run_name: nimble-fish-579
+run_uuid: a008e0904d064fa18f51f9afa4215a34
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819778542
+status: 3
+tags: []
+user_id: henrytomlinson

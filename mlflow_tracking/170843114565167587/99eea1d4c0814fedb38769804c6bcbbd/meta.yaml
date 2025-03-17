@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/99eea1d4c0814fedb38769804c6bcbbd/artifacts
+end_time: 1740816239957
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 99eea1d4c0814fedb38769804c6bcbbd
+run_name: persistent-kite-272
+run_uuid: 99eea1d4c0814fedb38769804c6bcbbd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816239947
+status: 3
+tags: []
+user_id: henrytomlinson

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/2da8c9c7338946708eaf1deb3bca80d0/artifacts
+end_time: 1740816240193
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 2da8c9c7338946708eaf1deb3bca80d0
+run_name: efficient-shrimp-75
+run_uuid: 2da8c9c7338946708eaf1deb3bca80d0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816240172
+status: 3
+tags: []
+user_id: henrytomlinson

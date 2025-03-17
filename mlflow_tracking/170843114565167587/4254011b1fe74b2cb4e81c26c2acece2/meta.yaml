@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/4254011b1fe74b2cb4e81c26c2acece2/artifacts
+end_time: 1740819732143
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 4254011b1fe74b2cb4e81c26c2acece2
+run_name: capricious-toad-241
+run_uuid: 4254011b1fe74b2cb4e81c26c2acece2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819731596
+status: 3
+tags: []
+user_id: henrytomlinson

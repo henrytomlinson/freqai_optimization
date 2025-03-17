@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/d4949440f068498b988762d69f6abcfc/artifacts
+end_time: 1740816241057
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: d4949440f068498b988762d69f6abcfc
+run_name: flawless-ox-977
+run_uuid: d4949440f068498b988762d69f6abcfc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816241039
+status: 3
+tags: []
+user_id: henrytomlinson

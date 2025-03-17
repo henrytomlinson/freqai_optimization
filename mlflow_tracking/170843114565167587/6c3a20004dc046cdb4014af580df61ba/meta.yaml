@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/6c3a20004dc046cdb4014af580df61ba/artifacts
+end_time: 1740819761925
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 6c3a20004dc046cdb4014af580df61ba
+run_name: dashing-boar-174
+run_uuid: 6c3a20004dc046cdb4014af580df61ba
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819761251
+status: 3
+tags: []
+user_id: henrytomlinson

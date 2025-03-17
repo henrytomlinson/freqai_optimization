@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/1a165fbdc51b44baba5350b6b6935cac/artifacts
+end_time: 1740816240337
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 1a165fbdc51b44baba5350b6b6935cac
+run_name: suave-turtle-497
+run_uuid: 1a165fbdc51b44baba5350b6b6935cac
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816240327
+status: 3
+tags: []
+user_id: henrytomlinson

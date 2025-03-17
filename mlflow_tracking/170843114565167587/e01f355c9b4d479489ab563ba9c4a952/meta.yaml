@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/e01f355c9b4d479489ab563ba9c4a952/artifacts
+end_time: 1740819727146
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: e01f355c9b4d479489ab563ba9c4a952
+run_name: calm-owl-572
+run_uuid: e01f355c9b4d479489ab563ba9c4a952
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819726373
+status: 3
+tags: []
+user_id: henrytomlinson

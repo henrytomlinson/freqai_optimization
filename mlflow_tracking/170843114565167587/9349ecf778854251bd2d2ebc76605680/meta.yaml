@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/9349ecf778854251bd2d2ebc76605680/artifacts
+end_time: 1740816240833
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 9349ecf778854251bd2d2ebc76605680
+run_name: glamorous-stork-596
+run_uuid: 9349ecf778854251bd2d2ebc76605680
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816240819
+status: 3
+tags: []
+user_id: henrytomlinson

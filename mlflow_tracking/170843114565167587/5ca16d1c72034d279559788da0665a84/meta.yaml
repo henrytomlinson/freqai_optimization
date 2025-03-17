@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/5ca16d1c72034d279559788da0665a84/artifacts
+end_time: 1740816240791
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 5ca16d1c72034d279559788da0665a84
+run_name: indecisive-sheep-610
+run_uuid: 5ca16d1c72034d279559788da0665a84
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816240777
+status: 3
+tags: []
+user_id: henrytomlinson

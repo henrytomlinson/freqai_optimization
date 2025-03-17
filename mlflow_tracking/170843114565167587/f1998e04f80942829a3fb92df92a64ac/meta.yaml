@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/f1998e04f80942829a3fb92df92a64ac/artifacts
+end_time: 1740816241005
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: f1998e04f80942829a3fb92df92a64ac
+run_name: popular-boar-666
+run_uuid: f1998e04f80942829a3fb92df92a64ac
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816240990
+status: 3
+tags: []
+user_id: henrytomlinson

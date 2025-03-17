@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/94309ca221134255878ef3ac16211d8e/artifacts
+end_time: 1740816240376
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 94309ca221134255878ef3ac16211d8e
+run_name: handsome-gnu-0
+run_uuid: 94309ca221134255878ef3ac16211d8e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816240366
+status: 3
+tags: []
+user_id: henrytomlinson

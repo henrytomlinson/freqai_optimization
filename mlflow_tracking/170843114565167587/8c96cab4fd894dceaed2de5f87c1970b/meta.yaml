@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/8c96cab4fd894dceaed2de5f87c1970b/artifacts
+end_time: 1740816239844
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 8c96cab4fd894dceaed2de5f87c1970b
+run_name: rare-fish-303
+run_uuid: 8c96cab4fd894dceaed2de5f87c1970b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816239828
+status: 3
+tags: []
+user_id: henrytomlinson

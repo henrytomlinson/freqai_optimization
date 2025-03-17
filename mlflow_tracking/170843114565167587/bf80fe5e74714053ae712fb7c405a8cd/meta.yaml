@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/bf80fe5e74714053ae712fb7c405a8cd/artifacts
+end_time: 1740816240325
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: bf80fe5e74714053ae712fb7c405a8cd
+run_name: abundant-stag-893
+run_uuid: bf80fe5e74714053ae712fb7c405a8cd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816240316
+status: 3
+tags: []
+user_id: henrytomlinson

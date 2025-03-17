@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/54b2747214b24a8290823ea0183d3202/artifacts
+end_time: 1740819725169
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 54b2747214b24a8290823ea0183d3202
+run_name: sincere-cow-855
+run_uuid: 54b2747214b24a8290823ea0183d3202
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819724809
+status: 3
+tags: []
+user_id: henrytomlinson

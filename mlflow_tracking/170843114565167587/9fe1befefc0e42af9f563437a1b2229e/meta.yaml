@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/9fe1befefc0e42af9f563437a1b2229e/artifacts
+end_time: 1740816240439
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 9fe1befefc0e42af9f563437a1b2229e
+run_name: delicate-gull-909
+run_uuid: 9fe1befefc0e42af9f563437a1b2229e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816240425
+status: 3
+tags: []
+user_id: henrytomlinson

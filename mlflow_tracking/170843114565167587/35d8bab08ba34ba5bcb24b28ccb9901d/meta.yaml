@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/35d8bab08ba34ba5bcb24b28ccb9901d/artifacts
+end_time: 1740816239710
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 35d8bab08ba34ba5bcb24b28ccb9901d
+run_name: clumsy-mink-146
+run_uuid: 35d8bab08ba34ba5bcb24b28ccb9901d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816239703
+status: 3
+tags: []
+user_id: henrytomlinson

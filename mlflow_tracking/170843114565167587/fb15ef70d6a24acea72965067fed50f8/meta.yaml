@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/fb15ef70d6a24acea72965067fed50f8/artifacts
+end_time: 1740819731588
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: fb15ef70d6a24acea72965067fed50f8
+run_name: bemused-goose-130
+run_uuid: fb15ef70d6a24acea72965067fed50f8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819731042
+status: 3
+tags: []
+user_id: henrytomlinson

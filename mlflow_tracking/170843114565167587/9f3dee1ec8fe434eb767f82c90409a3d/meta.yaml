@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/9f3dee1ec8fe434eb767f82c90409a3d/artifacts
+end_time: 1740816239870
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 9f3dee1ec8fe434eb767f82c90409a3d
+run_name: bright-boar-206
+run_uuid: 9f3dee1ec8fe434eb767f82c90409a3d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816239859
+status: 3
+tags: []
+user_id: henrytomlinson

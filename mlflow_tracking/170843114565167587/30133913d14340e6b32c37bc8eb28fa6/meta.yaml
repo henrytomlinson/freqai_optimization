@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/30133913d14340e6b32c37bc8eb28fa6/artifacts
+end_time: 1740819760507
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 30133913d14340e6b32c37bc8eb28fa6
+run_name: unequaled-zebra-129
+run_uuid: 30133913d14340e6b32c37bc8eb28fa6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819759777
+status: 3
+tags: []
+user_id: henrytomlinson

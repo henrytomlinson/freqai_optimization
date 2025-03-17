@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/a7a715d1487542e69d95f4781fba8bf0/artifacts
+end_time: 1740819747414
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: a7a715d1487542e69d95f4781fba8bf0
+run_name: spiffy-rook-457
+run_uuid: a7a715d1487542e69d95f4781fba8bf0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819746896
+status: 3
+tags: []
+user_id: henrytomlinson

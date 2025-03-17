@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/9d1ab1f37f9544c49394df3e28f53f8b/artifacts
+end_time: 1740819785022
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 9d1ab1f37f9544c49394df3e28f53f8b
+run_name: agreeable-slug-827
+run_uuid: 9d1ab1f37f9544c49394df3e28f53f8b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819784351
+status: 3
+tags: []
+user_id: henrytomlinson

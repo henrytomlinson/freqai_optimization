@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/62cd21fee0ab405786641180b7fefc97/artifacts
+end_time: 1740819772779
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 62cd21fee0ab405786641180b7fefc97
+run_name: fearless-bird-352
+run_uuid: 62cd21fee0ab405786641180b7fefc97
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819772043
+status: 3
+tags: []
+user_id: henrytomlinson

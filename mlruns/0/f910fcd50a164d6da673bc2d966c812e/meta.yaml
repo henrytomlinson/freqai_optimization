@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlruns/0/f910fcd50a164d6da673bc2d966c812e/artifacts
+end_time: 1740820202785
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f910fcd50a164d6da673bc2d966c812e
+run_name: powerful-deer-543
+run_uuid: f910fcd50a164d6da673bc2d966c812e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740820202727
+status: 3
+tags: []
+user_id: henrytomlinson

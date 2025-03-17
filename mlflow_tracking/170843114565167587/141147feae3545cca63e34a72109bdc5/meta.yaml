@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/141147feae3545cca63e34a72109bdc5/artifacts
+end_time: 1740819749463
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 141147feae3545cca63e34a72109bdc5
+run_name: casual-cow-564
+run_uuid: 141147feae3545cca63e34a72109bdc5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819748886
+status: 3
+tags: []
+user_id: henrytomlinson

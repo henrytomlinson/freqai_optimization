@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/841f3f273c8541adb6f283f7ad7206c9/artifacts
+end_time: 1740816239658
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 841f3f273c8541adb6f283f7ad7206c9
+run_name: selective-worm-69
+run_uuid: 841f3f273c8541adb6f283f7ad7206c9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816239654
+status: 3
+tags: []
+user_id: henrytomlinson

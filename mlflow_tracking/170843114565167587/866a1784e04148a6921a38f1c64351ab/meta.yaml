@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/866a1784e04148a6921a38f1c64351ab/artifacts
+end_time: 1740819737280
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 866a1784e04148a6921a38f1c64351ab
+run_name: skittish-chimp-653
+run_uuid: 866a1784e04148a6921a38f1c64351ab
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819736568
+status: 3
+tags: []
+user_id: henrytomlinson

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/cca89eb3521744de83ada161ea4557fd/artifacts
+end_time: 1740816239932
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: cca89eb3521744de83ada161ea4557fd
+run_name: spiffy-worm-71
+run_uuid: cca89eb3521744de83ada161ea4557fd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816239924
+status: 3
+tags: []
+user_id: henrytomlinson

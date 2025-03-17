@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/3da80b970cfd497481757201d5a399ee/artifacts
+end_time: 1740819764723
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 3da80b970cfd497481757201d5a399ee
+run_name: lyrical-ray-327
+run_uuid: 3da80b970cfd497481757201d5a399ee
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819764034
+status: 3
+tags: []
+user_id: henrytomlinson

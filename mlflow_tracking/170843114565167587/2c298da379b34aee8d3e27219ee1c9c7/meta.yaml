@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/2c298da379b34aee8d3e27219ee1c9c7/artifacts
+end_time: 1740819722593
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 2c298da379b34aee8d3e27219ee1c9c7
+run_name: beautiful-fox-975
+run_uuid: 2c298da379b34aee8d3e27219ee1c9c7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819722090
+status: 3
+tags: []
+user_id: henrytomlinson

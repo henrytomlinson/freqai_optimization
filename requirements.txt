@@ -1,0 +1,14 @@
+freqtrade==2024.1
+lightgbm
+xgboost
+optuna
+mlflow
+scikit-learn
+pandas
+numpy
+matplotlib
+pytest
+plotly
+joblib
+ccxt
+ta-lib

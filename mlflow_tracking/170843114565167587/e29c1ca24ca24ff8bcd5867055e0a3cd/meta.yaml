@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/e29c1ca24ca24ff8bcd5867055e0a3cd/artifacts
+end_time: 1740819736560
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: e29c1ca24ca24ff8bcd5867055e0a3cd
+run_name: bouncy-dove-337
+run_uuid: e29c1ca24ca24ff8bcd5867055e0a3cd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819736080
+status: 3
+tags: []
+user_id: henrytomlinson

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/ac2e836d366542f69820bf26a5a3b8f0/artifacts
+end_time: 1740816240085
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: ac2e836d366542f69820bf26a5a3b8f0
+run_name: fun-conch-228
+run_uuid: ac2e836d366542f69820bf26a5a3b8f0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816240073
+status: 3
+tags: []
+user_id: henrytomlinson

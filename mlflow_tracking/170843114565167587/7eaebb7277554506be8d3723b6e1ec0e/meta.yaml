@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/7eaebb7277554506be8d3723b6e1ec0e/artifacts
+end_time: 1740816239827
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 7eaebb7277554506be8d3723b6e1ec0e
+run_name: righteous-finch-715
+run_uuid: 7eaebb7277554506be8d3723b6e1ec0e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816239816
+status: 3
+tags: []
+user_id: henrytomlinson

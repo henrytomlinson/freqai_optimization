@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/c7adbc13960b4a8eab4a49392c26abfb/artifacts
+end_time: 1740819773474
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: c7adbc13960b4a8eab4a49392c26abfb
+run_name: gentle-pig-835
+run_uuid: c7adbc13960b4a8eab4a49392c26abfb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819772788
+status: 3
+tags: []
+user_id: henrytomlinson

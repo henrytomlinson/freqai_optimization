@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/58be73c2e7e443e4affc017a59fb284a/artifacts
+end_time: 1740819762710
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 58be73c2e7e443e4affc017a59fb284a
+run_name: auspicious-kite-780
+run_uuid: 58be73c2e7e443e4affc017a59fb284a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819761934
+status: 3
+tags: []
+user_id: henrytomlinson

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/956c19ea42a44e979bf94f1e883f769c/artifacts
+end_time: 1740819725452
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 956c19ea42a44e979bf94f1e883f769c
+run_name: shivering-mare-890
+run_uuid: 956c19ea42a44e979bf94f1e883f769c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819725173
+status: 3
+tags: []
+user_id: henrytomlinson

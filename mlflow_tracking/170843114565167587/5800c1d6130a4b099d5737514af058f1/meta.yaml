@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/5800c1d6130a4b099d5737514af058f1/artifacts
+end_time: 1740816239702
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 5800c1d6130a4b099d5737514af058f1
+run_name: placid-dog-197
+run_uuid: 5800c1d6130a4b099d5737514af058f1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816239694
+status: 3
+tags: []
+user_id: henrytomlinson

@@ -1,0 +1,150 @@
+{
+    "max_open_trades": 5,
+    "stake_currency": "USDT",
+    "stake_amount": "unlimited",
+    "tradable_balance_ratio": 0.99,
+    "fiat_display_currency": "USD",
+    "dry_run": true,
+    "dry_run_wallet": 10000,
+    "cancel_open_orders_on_exit": false,
+    "trading_mode": "spot",
+    "margin_mode": "",
+    "unfilledtimeout": {
+        "entry": 10,
+        "exit": 10,
+        "exit_timeout_count": 0,
+        "unit": "minutes"
+    },
+    "entry_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "exit_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1
+    },
+    "exchange": {
+        "name": "binance",
+        "key": "",
+        "secret": "",
+        "ccxt_config": {
+            "timeout": 60000,
+            "enableRateLimit": true
+        },
+        "ccxt_async_config": {
+            "timeout": 60000,
+            "enableRateLimit": true
+        },
+        "pair_whitelist": [
+            "BTC/USDT",
+            "ETH/USDT",
+            "BNB/USDT",
+            "ADA/USDT",
+            "SOL/USDT",
+            "XRP/USDT",
+            "DOT/USDT",
+            "DOGE/USDT",
+            "AVAX/USDT",
+            "MATIC/USDT"
+        ],
+        "pair_blacklist": [
+            "BNB/.*",
+            ".*DOWN/.*",
+            ".*UP/.*"
+        ]
+    },
+    "pairlists": [
+        {
+            "method": "StaticPairList"
+        }
+    ],
+    "telegram": {
+        "enabled": false,
+        "token": "",
+        "chat_id": ""
+    },
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "127.0.0.1",
+        "listen_port": 8081,
+        "verbosity": "error",
+        "enable_openapi": true,
+        "jwt_secret_key": "freqai_optimization_secret",
+        "CORS_origins": [],
+        "username": "freqai",
+        "password": "optimization"
+    },
+    "bot_name": "freqai_optimized_bot",
+    "initial_state": "running",
+    "force_entry_enable": false,
+    "internals": {
+        "process_throttle_secs": 5
+    },
+    "user_data_dir": "./user_data",
+    "strategy": "FreqAIOptimizedStrategy",
+    "logfile": "freqai_strategy.log",
+    "loglevel": {
+        "freqtrade": "INFO",
+        "freqtrade.strategy": "INFO",
+        "freqtrade.freqai": "DEBUG"
+    },
+    "freqai": {
+        "enabled": true,
+        "freqaimodel": "LightGBMRegressorMultiTarget",
+        "purge_old_models": true,
+        "train_period_days": 7,
+        "backtest_period_days": 3,
+        "identifier": "optimized_model",
+        "live_retrain_hours": 24,
+        "expiration_hours": 168,
+        "fit_live_predictions_candles": 300,
+        "save_backtest_models": true,
+        "model_save_type": "joblib",
+        "data_kitchen_thread_count": 4,
+        "feature_parameters": {
+            "include_timeframes": [
+                "5m",
+                "15m",
+                "1h"
+            ],
+            "include_corr_pairlist": [
+                "BTC/USDT",
+                "ETH/USDT"
+            ],
+            "label_period_candles": 24,
+            "include_shifted_candles": 3,
+            "DI_threshold": 0.0,
+            "weight_factor": 0.9,
+            "principal_component_analysis": false,
+            "use_SVM_to_remove_outliers": false,
+            "stratify_training_data": 0,
+            "indicator_max_period_candles": 100,
+            "indicator_periods_candles": [
+                10,
+                20,
+                30,
+                50,
+                100
+            ]
+        },
+        "data_split_parameters": {
+            "test_size": 0.15,
+            "random_state": 42,
+            "shuffle": false
+        },
+        "model_training_parameters": {
+            "n_estimators": 400,
+            "learning_rate": 0.02,
+            "max_depth": 6,
+            "verbosity": 0,
+            "random_state": 42
+        }
+    }
+}

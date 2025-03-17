@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/063977de09a24d61bb49abf7514c7c52/artifacts
+end_time: 1740819743059
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 063977de09a24d61bb49abf7514c7c52
+run_name: honorable-carp-982
+run_uuid: 063977de09a24d61bb49abf7514c7c52
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819742768
+status: 3
+tags: []
+user_id: henrytomlinson

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/4ce57e81398645d3b797409522d1023f/artifacts
+end_time: 1740819751784
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 4ce57e81398645d3b797409522d1023f
+run_name: glamorous-dove-399
+run_uuid: 4ce57e81398645d3b797409522d1023f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819751056
+status: 3
+tags: []
+user_id: henrytomlinson

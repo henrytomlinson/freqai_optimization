@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/464e222939aa4f2782219159567d7bb7/artifacts
+end_time: 1740819761243
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 464e222939aa4f2782219159567d7bb7
+run_name: unleashed-shad-493
+run_uuid: 464e222939aa4f2782219159567d7bb7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819760516
+status: 3
+tags: []
+user_id: henrytomlinson

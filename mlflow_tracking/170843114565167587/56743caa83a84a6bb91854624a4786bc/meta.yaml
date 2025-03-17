@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/56743caa83a84a6bb91854624a4786bc/artifacts
+end_time: 1740819778396
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 56743caa83a84a6bb91854624a4786bc
+run_name: bemused-gnat-480
+run_uuid: 56743caa83a84a6bb91854624a4786bc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819777644
+status: 3
+tags: []
+user_id: henrytomlinson

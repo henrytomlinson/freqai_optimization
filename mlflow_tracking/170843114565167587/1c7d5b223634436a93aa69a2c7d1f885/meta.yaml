@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/1c7d5b223634436a93aa69a2c7d1f885/artifacts
+end_time: 1740819746887
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 1c7d5b223634436a93aa69a2c7d1f885
+run_name: resilient-vole-630
+run_uuid: 1c7d5b223634436a93aa69a2c7d1f885
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819746185
+status: 3
+tags: []
+user_id: henrytomlinson

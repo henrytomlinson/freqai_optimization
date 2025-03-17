@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/61f6bc0c0aa7404e9c3dc1797f6e307e/artifacts
+end_time: 1740819784339
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 61f6bc0c0aa7404e9c3dc1797f6e307e
+run_name: delicate-koi-763
+run_uuid: 61f6bc0c0aa7404e9c3dc1797f6e307e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819783664
+status: 3
+tags: []
+user_id: henrytomlinson

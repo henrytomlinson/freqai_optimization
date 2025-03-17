@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/e0851694b16d4d0aaf7b49b1ff9d9d3c/artifacts
+end_time: 1740819756956
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: e0851694b16d4d0aaf7b49b1ff9d9d3c
+run_name: puzzled-mare-436
+run_uuid: e0851694b16d4d0aaf7b49b1ff9d9d3c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819756588
+status: 3
+tags: []
+user_id: henrytomlinson

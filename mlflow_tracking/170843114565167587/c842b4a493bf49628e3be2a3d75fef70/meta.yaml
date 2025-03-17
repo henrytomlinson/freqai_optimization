@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/c842b4a493bf49628e3be2a3d75fef70/artifacts
+end_time: 1740816239639
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: c842b4a493bf49628e3be2a3d75fef70
+run_name: sneaky-wren-336
+run_uuid: c842b4a493bf49628e3be2a3d75fef70
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816239635
+status: 3
+tags: []
+user_id: henrytomlinson

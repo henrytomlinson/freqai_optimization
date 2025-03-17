@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/ba4303ce76054d928503b2eddfa25024/artifacts
+end_time: 1740816239611
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: ba4303ce76054d928503b2eddfa25024
+run_name: delightful-loon-724
+run_uuid: ba4303ce76054d928503b2eddfa25024
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816239607
+status: 3
+tags: []
+user_id: henrytomlinson

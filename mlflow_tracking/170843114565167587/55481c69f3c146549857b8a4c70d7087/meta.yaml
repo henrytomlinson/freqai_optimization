@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/55481c69f3c146549857b8a4c70d7087/artifacts
+end_time: 1740819772034
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 55481c69f3c146549857b8a4c70d7087
+run_name: whimsical-croc-459
+run_uuid: 55481c69f3c146549857b8a4c70d7087
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819771248
+status: 3
+tags: []
+user_id: henrytomlinson

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/2707b4c2af9846288db6aa5d7b6067df/artifacts
+end_time: 1740819733567
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: 2707b4c2af9846288db6aa5d7b6067df
+run_name: spiffy-ant-610
+run_uuid: 2707b4c2af9846288db6aa5d7b6067df
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819732832
+status: 3
+tags: []
+user_id: henrytomlinson

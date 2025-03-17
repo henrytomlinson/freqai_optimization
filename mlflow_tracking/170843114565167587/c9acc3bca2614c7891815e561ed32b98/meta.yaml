@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/c9acc3bca2614c7891815e561ed32b98/artifacts
+end_time: 1740819778533
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: c9acc3bca2614c7891815e561ed32b98
+run_name: judicious-stork-145
+run_uuid: c9acc3bca2614c7891815e561ed32b98
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740819778405
+status: 3
+tags: []
+user_id: henrytomlinson

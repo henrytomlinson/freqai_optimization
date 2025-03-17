@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/henrytomlinson/freqai_optimization/mlflow_tracking/170843114565167587/dec8eba0215d46bcacdf75c26474b335/artifacts
+end_time: 1740816240543
+entry_point_name: ''
+experiment_id: '170843114565167587'
+lifecycle_stage: active
+run_id: dec8eba0215d46bcacdf75c26474b335
+run_name: rumbling-shad-227
+run_uuid: dec8eba0215d46bcacdf75c26474b335
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740816240508
+status: 3
+tags: []
+user_id: henrytomlinson
