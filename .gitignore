@@ -55,4 +55,8 @@ config.json
 
 # Log files
 *.log
-logs/ 
+logs/
+
+# Large files
+freqai_project.tar.gz
+*.tar.gz 
