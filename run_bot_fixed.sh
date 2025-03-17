@@ -1,33 +1,38 @@
 #!/bin/bash
 
-# Exit on error
-set -e
-
-# Define the user's home directory and project directory explicitly
-USER_HOME="/home/henry"
-PROJECT_DIR="${USER_HOME}/freqai_optimization"
-
+# Print header
 echo "=== FreqAI Bot Startup Script ==="
 
-# Check if port 8082 is in use and kill the process if needed
-PORT_CHECK=$(lsof -i:8082 -t || echo "")
-if [ ! -z "$PORT_CHECK" ]; then
-    echo "Port 8082 is already in use by process $PORT_CHECK. Stopping it..."
-    sudo kill -9 $PORT_CHECK
-    sleep 2
-    echo "Process stopped."
+# Define project directory as current directory
+PROJECT_DIR="$(pwd)"
+
+# Activate virtual environment if it exists
+if [ -d "venv" ]; then
+    source venv/bin/activate
+else
+    echo "Virtual environment not found. Please run setup script first."
+    exit 1
 fi
 
-# Activate virtual environment
-cd "${PROJECT_DIR}"
-source "${PROJECT_DIR}/venv/bin/activate"
+# Check if config file exists
+if [ ! -f "config/freqtrade_config.json" ]; then
+    echo "Configuration file not found!"
+    exit 1
+fi
 
-# Set environment variables to increase timeout for Binance API
-export BINANCE_API_TIMEOUT=120000
+# Check if port 8080 is in use
+if lsof -i:8080 >/dev/null 2>&1; then
+    echo "Port 8080 is already in use. Please free up the port before running the bot."
+    echo "You can use: lsof -i:8080 to see which process is using it"
+    exit 1
+fi
 
-# Run the bot with increased timeout
-echo "Starting FreqAI bot in dry run mode..."
-freqtrade trade --config "${PROJECT_DIR}/config/freqtrade_config.json" --strategy FreqAIOptimizedStrategy --freqaimodel LightGBMRegressorMultiTarget
+# Start the bot
+echo "Starting FreqTrade bot..."
+freqtrade trade \
+    --config config/freqtrade_config.json \
+    --strategy-path strategy \
+    --db-url sqlite:///tradesv3.dryrun.sqlite
 
 # Note: This script should be run in a screen session:
 # screen -S freqai

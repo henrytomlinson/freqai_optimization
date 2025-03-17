@@ -35,12 +35,12 @@
         "key": "",
         "secret": "",
         "ccxt_config": {
-            "timeout": 60000,
-            "enableRateLimit": true
+            "enableRateLimit": true,
+            "timeout": 120000
         },
         "ccxt_async_config": {
-            "timeout": 60000,
-            "enableRateLimit": true
+            "enableRateLimit": true,
+            "timeout": 120000
         },
         "pair_whitelist": [
             "BTC/USDT",
@@ -55,7 +55,6 @@
             "MATIC/USDT"
         ],
         "pair_blacklist": [
-            "BNB/.*",
             ".*DOWN/.*",
             ".*UP/.*"
         ]
@@ -73,11 +72,13 @@
     "api_server": {
         "enabled": true,
         "listen_ip_address": "127.0.0.1",
-        "listen_port": 8081,
-        "verbosity": "error",
+        "listen_port": 8080,
+        "verbosity": "info",
         "enable_openapi": true,
         "jwt_secret_key": "freqai_optimization_secret",
-        "CORS_origins": [],
+        "CORS_origins": [
+            "http://127.0.0.1:8080"
+        ],
         "username": "freqai",
         "password": "optimization"
     },

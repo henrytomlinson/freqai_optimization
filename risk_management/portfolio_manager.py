@@ -1,49 +1,259 @@
 import numpy as np
 import pandas as pd
+from typing import Optional, Dict, Any, Tuple
 
 
 class PortfolioRiskManager:
+    """
+    Portfolio risk manager for optimizing position sizes and managing risk
+    in trading strategies.
+    """
 
-    def __init__(self, initial_capital=10000, max_risk_per_trade=0.02):
+    def __init__(
+        self,
+        max_position_size: float = 0.1,
+        max_total_risk: float = 0.02,
+        risk_free_rate: float = 0.02,
+        target_sharpe: float = 2.0,
+        max_drawdown_threshold: float = 0.2
+    ):
         """
-        Initialize portfolio risk management
-
-        :param initial_capital: Starting portfolio value
-        :param max_risk_per_trade: Maximum risk allowed per trade (2% default)
+        Initialize the portfolio risk manager.
+        
+        Args:
+            max_position_size (float): Maximum position size as fraction of portfolio.
+            max_total_risk (float): Maximum total portfolio risk as fraction.
+            risk_free_rate (float): Annual risk-free rate for Sharpe calculation.
+            target_sharpe (float): Target Sharpe ratio for position sizing.
+            max_drawdown_threshold (float): Maximum allowable drawdown threshold.
         """
-        self.initial_capital = initial_capital
-        self.current_capital = initial_capital
-        self.max_risk_per_trade = max_risk_per_trade
-        self.max_drawdown = 0.1  # 10% maximum portfolio drawdown
-
-        # Trade tracking
-        self.open_trades = []
-        self.trade_history = []
-
-    def calculate_position_size(self, model_prediction=None, market_volatility=None):
+        self.max_position_size = max_position_size
+        self.max_total_risk = max_total_risk
+        self.risk_free_rate = risk_free_rate
+        self.target_sharpe = target_sharpe
+        self.max_drawdown_threshold = max_drawdown_threshold
+        
+        # Initialize portfolio metrics
+        self.current_positions: Dict[str, float] = {}
+        self.portfolio_value: float = 0.0
+        self.drawdown_history: list = []
+        
+    def update_capital(self, new_capital: float) -> None:
         """
-        Dynamically calculate optimal position size
-
-        :param model_prediction: Confidence of trade prediction
-        :param market_volatility: Current market volatility
-        :return: Position size in dollars
+        Update the current capital.
+        
+        Args:
+            new_capital (float): New capital amount
         """
-        # Base position sizing
-        base_position = self.current_capital * self.max_risk_per_trade
+        self.portfolio_value = new_capital
+        
+    def calculate_position_size(
+        self,
+        symbol: str,
+        entry_price: float,
+        stop_loss: float,
+        confidence: float,
+        volatility: float
+    ) -> float:
+        """
+        Calculate optimal position size based on risk parameters.
+        
+        Args:
+            symbol (str): Trading pair symbol.
+            entry_price (float): Entry price for the position.
+            stop_loss (float): Stop loss price.
+            confidence (float): Model confidence score (0-1).
+            volatility (float): Current market volatility.
+            
+        Returns:
+            float: Recommended position size as fraction of portfolio.
+        """
+        # Calculate risk per trade
+        risk_per_trade = abs(entry_price - stop_loss) / entry_price
+        
+        # Adjust position size based on volatility
+        volatility_factor = 1.0 / (1.0 + volatility)
+        
+        # Calculate Kelly criterion
+        win_prob = 0.5 + (confidence - 0.5) * 2  # Scale confidence to win probability
+        loss_prob = 1 - win_prob
+        kelly_fraction = (win_prob - loss_prob) / risk_per_trade
+        
+        # Apply constraints and adjustments
+        position_size = min(
+            kelly_fraction * volatility_factor,
+            self.max_position_size
+        )
+        
+        # Ensure position respects total portfolio risk
+        total_risk = position_size * risk_per_trade
+        if total_risk > self.max_total_risk:
+            position_size = self.max_total_risk / risk_per_trade
+        
+        return max(0.0, position_size)
+    
+    def update_portfolio_metrics(
+        self,
+        current_value: float,
+        positions: Dict[str, float]
+    ) -> None:
+        """
+        Update portfolio metrics and track drawdown.
+        
+        Args:
+            current_value (float): Current portfolio value.
+            positions (Dict[str, float]): Current positions and their sizes.
+        """
+        self.portfolio_value = current_value
+        self.current_positions = positions.copy()
+        
+        # Calculate drawdown
+        if self.drawdown_history:
+            peak = max(self.drawdown_history)
+            drawdown = (peak - current_value) / peak
+            self.drawdown_history.append(drawdown)
+        else:
+            self.drawdown_history.append(0.0)
+    
+    def check_risk_limits(self) -> Tuple[bool, str]:
+        """
+        Check if current portfolio state respects risk limits.
+        
+        Returns:
+            Tuple[bool, str]: (is_safe, message) indicating if portfolio is within risk limits.
+        """
+        # Check total position exposure
+        total_exposure = sum(abs(pos) for pos in self.current_positions.values())
+        if total_exposure > 1.0:
+            return False, "Total position exposure exceeds 100%"
+        
+        # Check drawdown limit
+        current_drawdown = self.drawdown_history[-1] if self.drawdown_history else 0.0
+        if current_drawdown > self.max_drawdown_threshold:
+            return False, f"Maximum drawdown threshold exceeded: {current_drawdown:.2%}"
+        
+        # Check individual position sizes
+        for symbol, size in self.current_positions.items():
+            if abs(size) > self.max_position_size:
+                return False, f"Position size for {symbol} exceeds maximum allowed"
+        
+        return True, "Portfolio within risk limits"
+    
+    def calculate_portfolio_metrics(
+        self,
+        returns: pd.Series,
+        window: int = 252
+    ) -> Dict[str, float]:
+        """
+        Calculate key portfolio metrics.
+        
+        Args:
+            returns (pd.Series): Historical returns series.
+            window (int): Rolling window size for calculations.
+            
+        Returns:
+            Dict[str, float]: Dictionary of portfolio metrics.
+        """
+        # Calculate rolling metrics
+        rolling_std = returns.rolling(window=window).std()
+        rolling_mean = returns.rolling(window=window).mean()
+        
+        # Annualize metrics
+        annual_return = rolling_mean.iloc[-1] * 252
+        annual_volatility = rolling_std.iloc[-1] * np.sqrt(252)
+        
+        # Calculate Sharpe ratio
+        excess_returns = annual_return - self.risk_free_rate
+        sharpe_ratio = excess_returns / annual_volatility if annual_volatility != 0 else 0.0
+        
+        # Calculate maximum drawdown
+        cumulative_returns = (1 + returns).cumprod()
+        rolling_max = cumulative_returns.expanding().max()
+        drawdowns = (cumulative_returns - rolling_max) / rolling_max
+        max_drawdown = drawdowns.min()
+        
+        return {
+            'annual_return': annual_return,
+            'annual_volatility': annual_volatility,
+            'sharpe_ratio': sharpe_ratio,
+            'max_drawdown': max_drawdown,
+            'current_drawdown': drawdowns.iloc[-1]
+        }
 
-        # Adjust based on model confidence if provided
-        if model_prediction is not None:
-            confidence_multiplier = abs(model_prediction)
-            base_position *= confidence_multiplier
-
-        # Adjust based on market volatility if provided
-        if market_volatility is not None:
-            volatility_adjustment = 1 / (1 + market_volatility)
-            base_position *= volatility_adjustment
-
-        # Ensure position size is within safe limits
-        max_position = self.current_capital * 0.2  # No more than 20% in single trade
-        return min(base_position, max_position)
+    def add_position(self, symbol: str, amount: float, entry_price: float,
+                    stop_loss: Optional[float] = None) -> bool:
+        """
+        Add a new position to track.
+        
+        Args:
+            symbol (str): Trading pair symbol
+            amount (float): Position size in base currency
+            entry_price (float): Entry price
+            stop_loss (float, optional): Stop loss price
+            
+        Returns:
+            bool: True if position was added successfully
+        """
+        try:
+            position_risk = (amount * entry_price) / self.portfolio_value
+            
+            if stop_loss:
+                risk_amount = abs(entry_price - stop_loss) * amount
+                position_risk = risk_amount / self.portfolio_value
+            
+            if position_risk > self.max_total_risk:
+                return False
+            
+            self.current_positions[symbol] = amount
+            
+            return True
+            
+        except Exception as e:
+            print(f"Error adding position: {e}")
+            return False
+            
+    def remove_position(self, symbol: str) -> None:
+        """
+        Remove a position from tracking.
+        
+        Args:
+            symbol (str): Trading pair symbol
+        """
+        try:
+            if symbol in self.current_positions:
+                del self.current_positions[symbol]
+                
+        except Exception as e:
+            print(f"Error removing position: {e}")
+            
+    def adjust_position_risk(self, symbol: str, new_stop_loss: float) -> None:
+        """
+        Adjust the risk of an existing position.
+        
+        Args:
+            symbol (str): Trading pair symbol
+            new_stop_loss (float): New stop loss price
+        """
+        try:
+            if symbol in self.current_positions:
+                position = self.current_positions[symbol]
+                risk_amount = abs(position - new_stop_loss) * position
+                self.current_positions[symbol] = risk_amount / self.portfolio_value
+                
+        except Exception as e:
+            print(f"Error adjusting position risk: {e}")
+            
+    def get_position_info(self, symbol: str) -> Optional[Dict[str, Any]]:
+        """
+        Get information about a specific position.
+        
+        Args:
+            symbol (str): Trading pair symbol
+            
+        Returns:
+            Dict[str, Any]: Position information or None if not found
+        """
+        return self.current_positions.get(symbol)
 
     def simulate_trades(self, predictions):
         """
@@ -85,7 +295,7 @@ class PortfolioRiskManager:
 
             # Calculate position size
             position_size = self.calculate_position_size(
-                prediction, confidence)
+                symbol, price, price - price * 0.01, confidence, 0.0)
             shares = position_size / price
 
             # Record trade

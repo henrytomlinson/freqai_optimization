@@ -87,30 +87,34 @@ class FreqAIOptimizedStrategy(IStrategy):
         """
         super().__init__(config)
         
-        # Initialize risk manager
+        # Initialize risk manager with modern parameters
         self.risk_manager = PortfolioRiskManager(
-            initial_capital=config.get('dry_run_wallet', 10000),
-            max_risk_per_trade=0.02  # 2% risk per trade
+            max_position_size=0.1,  # 10% max position size
+            max_total_risk=0.02,    # 2% max risk per trade
+            risk_free_rate=0.02,    # 2% risk-free rate
+            target_sharpe=2.0,      # Target Sharpe ratio
+            max_drawdown_threshold=0.2  # 20% max drawdown
         )
+        
+        # Initialize portfolio value
+        self.risk_manager.portfolio_value = config.get('dry_run_wallet', 10000)
     
     def populate_indicators(self, dataframe: pd.DataFrame, metadata: dict) -> pd.DataFrame:
         """
         Generate indicators for the strategy using AdvancedFeatureGenerator
         """
-        # Use the AdvancedFeatureGenerator to create features
         try:
-            # Rename columns to match expected format
-            df = dataframe.copy()
+            # Initialize feature generator
+            feature_generator = AdvancedFeatureGenerator(lookback_window=20)
             
-            # Generate comprehensive features
-            df = AdvancedFeatureGenerator.generate_comprehensive_features(df)
+            # Generate features
+            dataframe = feature_generator.generate_features(dataframe)
             
-            # Merge generated features back to dataframe
-            for col in df.columns:
-                if col not in dataframe.columns:
-                    dataframe[col] = df[col]
+            # Normalize features
+            dataframe = feature_generator.normalize_features(dataframe)
             
             return dataframe
+            
         except Exception as e:
             logger.error(f"Error in populate_indicators: {e}")
             return dataframe
@@ -122,6 +126,12 @@ class FreqAIOptimizedStrategy(IStrategy):
         if not self.dp:
             return dataframe
         
+        # Initialize columns
+        dataframe['enter_long'] = 0
+        dataframe['enter_short'] = 0
+        dataframe['exit_long'] = 0
+        dataframe['exit_short'] = 0
+        
         # Check if FreqAI predictions exist
         if 'prediction' in dataframe.columns:
             dataframe.loc[
@@ -130,7 +140,7 @@ class FreqAIOptimizedStrategy(IStrategy):
                     (dataframe['rsi'] < self.buy_rsi_threshold.value) &  # RSI below threshold
                     (dataframe['volume'] > 0)  # Ensure volume exists
                 ),
-                'buy'] = 1
+                'enter_long'] = 1
         
         return dataframe
     
@@ -149,7 +159,7 @@ class FreqAIOptimizedStrategy(IStrategy):
                     (dataframe['rsi'] > self.sell_rsi_threshold.value) &  # RSI above threshold
                     (dataframe['volume'] > 0)  # Ensure volume exists
                 ),
-                'sell'] = 1
+                'exit_long'] = 1
         
         return dataframe
     
@@ -166,17 +176,36 @@ class FreqAIOptimizedStrategy(IStrategy):
         prediction_confidence = abs(last_candle.get('prediction', 0))
         
         # Get market volatility (using ATR as a proxy)
-        market_volatility = last_candle.get('atr', 0) / last_candle['close']
+        volatility = last_candle.get('atr', 0) / last_candle['close']
+        
+        # Calculate stop loss price (2% below entry)
+        stop_loss = rate * (1 - abs(self.stoploss))
         
         # Calculate position size based on risk management
         position_size = self.risk_manager.calculate_position_size(
-            model_prediction=prediction_confidence,
-            market_volatility=market_volatility
+            symbol=pair,
+            entry_price=rate,
+            stop_loss=stop_loss,
+            confidence=prediction_confidence,
+            volatility=volatility
         )
+        
+        # Update portfolio metrics
+        current_positions = {pair: position_size}
+        self.risk_manager.update_portfolio_metrics(
+            current_value=self.wallets.get_total_stake_amount(),
+            positions=current_positions
+        )
+        
+        # Check risk limits
+        is_safe, message = self.risk_manager.check_risk_limits()
+        if not is_safe:
+            logger.warning(f"Risk check failed for {pair}: {message}")
+            return False
         
         # Adjust trade amount if needed
         if position_size < amount * rate:
-            self.log(f"Risk management reduced position size for {pair}")
+            logger.info(f"Risk management reduced position size for {pair}")
             return False
         
         return True
@@ -195,15 +224,24 @@ class FreqAIOptimizedStrategy(IStrategy):
         prediction_confidence = abs(last_candle.get('prediction', 0))
         
         # Get market volatility (using ATR as a proxy)
-        market_volatility = last_candle.get('atr', 0) / last_candle['close']
+        volatility = last_candle.get('atr', 0) / last_candle['close']
+        
+        # Calculate stop loss price
+        stop_loss = current_rate * (1 - abs(self.stoploss))
         
         # Calculate position size based on risk management
         position_size = self.risk_manager.calculate_position_size(
-            model_prediction=prediction_confidence,
-            market_volatility=market_volatility
+            symbol=pair,
+            entry_price=current_rate,
+            stop_loss=stop_loss,
+            confidence=prediction_confidence,
+            volatility=volatility
         )
         
-        # Ensure position size is within limits
-        position_size = max(min_stake, min(position_size, max_stake))
+        # Convert position size to stake amount
+        stake_amount = position_size * self.wallets.get_total_stake_amount()
         
-        return position_size 
+        # Ensure position size is within limits
+        stake_amount = max(min_stake, min(stake_amount, max_stake))
+        
+        return stake_amount 
